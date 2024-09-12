@@ -82,7 +82,8 @@ model Pemesanan {
 
 model Pembayaran {
   id_pembayaran      Int            @id @default(autoincrement())
-  id_pemesanan       Int
+  id_pemesanan       Int            @unique
+  id_kamar           Int            @unique
   user_id            Int            @unique
   tanggal_pembayaran DateTime
   metode_pembayaran  Bayar
